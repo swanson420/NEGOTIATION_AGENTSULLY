@@ -152,7 +152,7 @@ def run_internet_bill_scenario(ledger_client: Any) -> ScenarioExecutionTrace:
 
     assert route_2 == RouteType.ACT_SILENTLY
     assert clearance_2.status == AdversarialClearanceStatus.CLEARED
-    assert cleared_record.gate_results["adversarial_clearance"]["status"] == "CLEARED"
+    assert cleared_record.gate_results["adversarial_clearance"].status == AdversarialClearanceStatus.CLEARED
 
     action_gate = ActionGate(
         ledger_client=ledger_client,

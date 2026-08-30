@@ -37,7 +37,7 @@ class ActionGate:
     def __init__(
         self,
         ledger_client: Any,
-        max_autonomous_level: CommitmentLevel = CommitmentLevel.LEVEL_3_STAGED_EXTERNAL,
+        max_autonomous_level: CommitmentLevel = CommitmentLevel.LEVEL_4_EXTERNAL_EMISSION,
         require_adversarial_clearance: bool = True,
     ):
         if not hasattr(ledger_client, "record_decision_view") or not callable(ledger_client.record_decision_view):
